@@ -1,0 +1,29 @@
+{
+  "name": "PresenterApp",
+  "version": "1.0.0",
+  "description": "Presenter Application",
+  "main": "dist/app.bundle.js",
+  "author": "Ifeanyi Onyekpe",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn webpack-dev-server --hot --inline --watch"
+  },
+  "dependencies": {
+    "aurelia-bootstrapper": "^2.1.1",
+    "ramda": "^0.25.0",
+    "remarkable": "^1.7.1"
+  },
+  "devDependencies": {
+    "aurelia-webpack-plugin": "^2.0.0-rc.5",
+    "autoprefixer": "^7.2.3",
+    "awesome-typescript-loader": "^3.4.1",
+    "css-loader": "^0.28.7",
+    "highlight.js": "^9.12.0",
+    "html-loader": "^0.5.1",
+    "style-loader": "^0.19.1",
+    "tslib": "^1.8.1",
+    "typescript": "^2.6.2",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7"
+  }
+}
