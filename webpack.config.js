@@ -9,6 +9,8 @@ const outDir = path.resolve(__dirname, 'dist')
 const srcDir = path.resolve(__dirname, 'src')
 const nodeModulesDir = path.resolve(__dirname, 'node_modules')
 
+const cssRules = [{ loader: 'css-loader' }]
+
 module.exports = {
   entry: 'aurelia-bootstrapper',
 
@@ -29,7 +31,12 @@ module.exports = {
       {
         test: /\.css$/i,
         issuer: [{ not: [{ test: /\.html$/i }] }],
-        use: ['style-loader', ['css-loader']],
+        use: ['style-loader', ...cssRules],
+      },
+      {
+        test: /\.css$/i,
+        issuer: [{ test: /\.html$/i }],
+        use: cssRules,
       },
       { test: /\.html$/i, loader: 'html-loader' },
       {
