@@ -1,6 +1,6 @@
 import { inject } from 'aurelia-framework'
 import Remarkable from 'remarkable'
-import { SlideContents } from './slideContent/index'
+import { SlideContents } from './slideContent/asyncAwait/index'
 import { map, curry } from 'ramda'
 
 @inject(Remarkable)
@@ -17,7 +17,7 @@ export class App {
       return {
         text: this.markdown.render(c.text),
       }
-    }, SlideContents)
+    }, SlideContents) 
 
     document.addEventListener('keydown', this.keydownInput(this), false)
   }
