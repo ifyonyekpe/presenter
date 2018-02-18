@@ -38,7 +38,15 @@ module.exports = {
         issuer: [{ test: /\.html$/i }],
         use: cssRules,
       },
-      { test: /\.html$/i, loader: 'html-loader' },
+      { test: /\.html$/i,
+        exclude: nodeModulesDir,
+        loader: 'html-loader' 
+      },
+      {
+        test: /\.(png|jpg|ttf|eot|svg|woff|woff2)$/,
+        exclude: /node_modules/,
+        use: 'url-loader?limit=100',
+      },
       {
         test: /\.ts$/i,
         loader: 'awesome-typescript-loader',
