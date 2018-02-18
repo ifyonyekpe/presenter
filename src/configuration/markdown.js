@@ -1,5 +1,5 @@
 import Remarkable from 'remarkable'
-const hljs = require('highlight.js')
+var hljs = require('highlight.js')
 
 const configure = aurelia => {
   let md = new Remarkable('full', settings)
@@ -9,23 +9,26 @@ const configure = aurelia => {
 
 const settings = {
   html: true,
+  xhtmlOut: false,
+  breaks: false,
+  langPrefix: 'hljs language-',
   linkify: true,
-  typographer: true,
+  linkTarget: '',
+  typographer: false,
   breaks: true,
   highlight: function(str, lang) {
     if (lang && hljs.getLanguage(lang)) {
       try {
-        return hljs.highlight(lang, str).value
-      } catch (err) {}
+        return hljs.highlight(lang, str).value;
+      } catch (__) {}
     }
 
-    console.log(hljs.highlightAuto(str).value)
     try {
-      return hljs.highlightAuto(str).value
-    } catch (err) {}
+      return hljs.highlightAuto(str).value;
+    } catch (__) {}
 
-    return '' // use external default escaping
-  },
+    return ''; 
+  }
 }
 
 const Markdown = { configure }
