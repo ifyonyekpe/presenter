@@ -1,8 +1,11 @@
 export const slide1 = `# Async Await in ASP.NET
 ### Introduction
 * Understand the fundamental concepts surrounding asynchronous programming particularly pertaining to ASP.NET
-* Benefits of applying this concept
-* Creating, Waiting and Harvesting Results
+* Benefits
+* Re
+* Execution Model
+* Tasks
+  * Creating, Waiting and Harvesting Results
 * Behind the scenes
 * Deadlocks and avoiding them
 * Best Practices
