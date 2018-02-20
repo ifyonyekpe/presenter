@@ -1,7 +1,8 @@
-export const slide5 = `# Drawbacks
-* Compilation takes time, and sometimes it could take a long time.
-* Some hot new stuff in JavaScript community? You may need to wait.
-* In order to run the application in the browser,
-  a compile step is required to transform TypeScript into JavaScript.
-* Unable to fix what was once broken in JavaScript.
+export const slide5 = `## Benefits
+* Responsiveness and Scalability
+    > **hide latency** of potentially long-running or blocking operations (e.g. I/O) by starting in the background.
+    So if you have any I/O bound needs (such as requesting from a \`network\` or \`accessing a database\`)
+    > 
+* Performance
+    > **reduce execution** time of CPU-bound computations by dividing workload into chunks and executing simultaneously 
 `

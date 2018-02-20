@@ -12,7 +12,7 @@ body {
 
 .content {
   display: inline-block;
-  padding: 20px;
+  padding: 0 20px;
 }
 
 blockquote {

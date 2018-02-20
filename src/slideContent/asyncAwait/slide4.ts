@@ -1,11 +1,3 @@
-export const slide4 = `# Benefits
-* Class and Module Support.
-* Static Type-checking.
-* ES6 Feature Support.
-* Safe automatic refactorings
-* Syntax Similarity to Backend Languages (C#, Java)
-* Superset of JavaScript.
-* Existing JavaScript code interoperability:
-  * Compiles down to conventional JavaScript
-  * Any JavaScript code is a valid TypeScript code
+export const slide4 = `## Execution Model
+![Execution Model](https://coding2fun.files.wordpress.com/2016/07/concurrency-vs-parallelism.jpg)
 `
