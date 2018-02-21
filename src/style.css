@@ -19,7 +19,11 @@ blockquote {
   font-size: 13px;
 }
 
-img[alt=intro]{
+img[alt='intro'] {
   width: 300px;
   height: 100px;
+}
+
+pre {
+  width: 700px;
 }

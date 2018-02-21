@@ -29,6 +29,6 @@ export const slide9 = `## Async Await In Depth
     return await firstTask;
   }
   \`\`\`
-  
+
   > **Note**: you can also use these methods along with Task.Run to do simple parallel composition.
 `

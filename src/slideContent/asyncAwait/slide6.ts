@@ -1,15 +1,30 @@
 export const slide6 = `## Async Await In Depth
 
-**Asynchronous methods** as a method marked with contextual keyword async. It doesn't necessarily mean that the method executes asynchronously. 
+**Asynchronous methods** as a method marked with contextual keyword async. It doesn't necessarily mean that the method executes asynchronously.
 It doesn't mean that the method is asynchronous at all. It only means that the compiler performs some special transformation to the method.
 
 Asynchronous methods look something like this:
 \`\`\` c#
 public async Task DoSomethingAsync()
 {
-  // In the Real World, we would actually do something...
-  // For this example, we're just going to (asynchronously) wait 100ms.
-  await Task.Delay(100);
+    await Task.Delay(100);
+}
+\`\`\`
+
+---
+
+\`\`\` c#
+protected void MyButton_Click(object sender, EventArgs e)
+{
+    Task<string> s = LoadStringAsync();
+    var fullName = s.Result; // warning: buggy
+}
+
+public async Task<string> LoadStringAsync()
+{
+    string firstName = await GetFirstNameAsync();
+    string lastName = await GetLastNameAsync();
+    return firstName + ” ” + lastName;
 }
 \`\`\`
 

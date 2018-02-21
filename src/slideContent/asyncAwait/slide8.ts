@@ -6,7 +6,7 @@ export const slide8 = `## Async Await In Depth
   - Otherwise its a \`TaskScheduler.Default\` (thread pool context)
 
   \`\`\` c#
-  pprotected async void MyButton_Click(object sender, EventArgs e)
+  protected async void MyButton_Click(object sender, EventArgs e)
   {
     // Since we asynchronously wait, the ASP.NET thread is not blocked by the file download.
     // This allows the thread to handle other requests while we're waiting.
@@ -20,6 +20,7 @@ export const slide8 = `## Async Await In Depth
 
 #### Avoiding Context
   - If you want to tell the awaiter to not capture the current context, you call the **ConfigureAwait** and pass \`false\`
+    - This method is used to suppress the default behavior of marshaling back to the original synchronization context
   - The important thing to note is that each level of async method calls has it's own context.
 
   \`\`\` c#

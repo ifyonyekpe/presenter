@@ -3,7 +3,7 @@ export const slide7 = `## Async Await In Depth
 #### Awaitables
   Common Types
   - Task
-  - Task<T>
+  - Task\\<T\\>
   - Task.Yield
   - or you can write your own awaitables
 
@@ -35,7 +35,7 @@ export const slide7 = `## Async Await In Depth
   - To return a value, the method must be of Task<T> and must return a value of type T.
 
   \`\`\` c#
-  public async Task<int> CalculateAnswer()
+  public async Task\<int\> CalculateAnswer()
   {
     await Task.Delay(100); // (Probably should be longer...)
 

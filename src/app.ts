@@ -7,7 +7,7 @@ import { map, curry } from 'ramda'
 export class App {
   markdown: Remarkable
   slides: { text: string }[]
-  currentIndex: number = 8
+  currentIndex: number = 10
   constructor(markdown: Remarkable) {
     this.markdown = markdown
   }
@@ -17,7 +17,7 @@ export class App {
       return {
         text: this.markdown.render(c.text),
       }
-    }, SlideContents) 
+    }, SlideContents)
 
     document.addEventListener('keydown', this.keydownInput(this), false)
   }
