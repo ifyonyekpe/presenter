@@ -11,7 +11,7 @@ export const slide8 = `## Async Await In Depth
     // Since we asynchronously wait, the ASP.NET thread is not blocked by the file download.
     // This allows the thread to handle other requests while we're waiting.
     await DownloadFileAsync(...);
-  
+
     // Since we resume on the ASP.NET context, we can access the current request.
     // We may actually be on another *thread*, but we have the same ASP.NET request context.
     Response.Write("File downloaded!");
@@ -19,7 +19,6 @@ export const slide8 = `## Async Await In Depth
   \`\`\`
 
 #### Avoiding Context
-  - Most async methods will be designed with composition in mind: they await other operations, and each one represents an asynchronous operation itself. 
   - If you want to tell the awaiter to not capture the current context, you call the **ConfigureAwait** and pass \`false\`
   - The important thing to note is that each level of async method calls has it's own context.
 
