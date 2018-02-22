@@ -2,17 +2,24 @@ export const slide10 = `## Best Practices
 
 #### Deadlock Scenerio
   \`\`\` c#
-  protected void MyButton_Click(object sender, EventArgs e)
-  {
-      Task<string> s = LoadStringAsync();
-      var fullName = s.Result; //1
-  }
+// My "library" method.
+public static async Task<JObject> GetJsonAsync(Uri uri)
+{
+    using (var client = new HttpClient())
+    {
+        var jsonString = await client.GetStringAsync(uri);
+        return JObject.Parse(jsonString);
+    }
+}
 
-  public async Task<string> LoadStringAsync()
-  {
-      string firstName = await GetFirstNameAsync(); //2
-      string lastName = await GetLastNameAsync(); //3
-      return firstName + ” ” + lastName;
-  }
+// My "top-level" method.
+public class MyController : ApiController
+{
+    public string Get()
+    {
+        var jsonTask = GetJsonAsync(...);
+        return jsonTask.Result.ToString();
+    }
+}
   \`\`\`
 `

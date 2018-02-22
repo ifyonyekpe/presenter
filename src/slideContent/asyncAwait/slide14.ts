@@ -1,5 +1,20 @@
-export const slide14 = `## Conclusion
+export const slide14 = `## Best Practices
 
-- Using async/await, it’s easier than ever to write Web applications, services and APIs that make maximum use of their server resources.
-- Before adopting async/await, ensure is beneficial to your architecture
+#### Thread Duplication Solution
+\`\`\` c#
+protected async void MyButton_Click(object sender, EventArgs e)
+{
+    btnRead.Enabled = false;
+    string content = await ReadFileAsync();
+    btnRead.Enabled = true;
+} 
+
+private Task<string> ReadFileAsync()
+{
+    using (FileStream fs = new FileStream(“File path”, FileMode.Open))
+    using (StreamReader sr = new StreamReader(fs))
+    {
+        return sr.ReadToEndAsync(); // 2
+    }
+}
 `

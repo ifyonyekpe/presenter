@@ -7,7 +7,7 @@ import { map, curry } from 'ramda'
 export class App {
   markdown: Remarkable
   slides: { text: string }[]
-  currentIndex: number = 10
+  currentIndex: number = 14
   constructor(markdown: Remarkable) {
     this.markdown = markdown
   }

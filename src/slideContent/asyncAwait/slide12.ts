@@ -1,23 +1,19 @@
 export const slide12 = `## Best Practices
 
-#### Thread Duplication
-\`\`\` c#
-protected async void MyButton_Click(object sender, EventArgs e)
-{
-    btnRead.Enabled = false;
-    string content = await ReadFileAsync();
-    btnRead.Enabled = true;
-} 
+#### Third-party Library
+- important to \`ConfigureAwait(false)\`
+- slight performance increase 
+- default implementation can cause deadlocks
 
-private Task<string> ReadFileAsync()
+\`\`\` c#
+protected async void button1_Click(object sender, EventArgs e)
 {
-    return Task.Run(() => // 1
-    {
-        using (FileStream fs = new FileStream(“File path”, FileMode.Open))
-        using (StreamReader sr = new StreamReader(fs))
-        {
-            return sr.ReadToEnd(); // 2
-        }
-    });
+    int result = await DoSomeWorkAsync();
+}
+
+private async Task<int> DoSomeWorkAsync()
+{
+    await Task.Delay(100).ConfigureAwait(true);
+    return 1;
 }
 `

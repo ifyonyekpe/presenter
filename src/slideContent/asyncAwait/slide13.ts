@@ -1,6 +1,6 @@
 export const slide13 = `## Best Practices
 
-#### Thread Duplication Solution
+#### Thread Duplication
 \`\`\` c#
 protected async void MyButton_Click(object sender, EventArgs e)
 {
@@ -11,10 +11,13 @@ protected async void MyButton_Click(object sender, EventArgs e)
 
 private Task<string> ReadFileAsync()
 {
-    using (FileStream fs = new FileStream(“File path”, FileMode.Open))
-    using (StreamReader sr = new StreamReader(fs))
+    return Task.Run(() => // 1
     {
-        return sr.ReadToEndAsync(); // 2
-    }
+        using (FileStream fs = new FileStream(“File path”, FileMode.Open))
+        using (StreamReader sr = new StreamReader(fs))
+        {
+            return sr.ReadToEnd(); // 2
+        }
+    });
 }
 `
