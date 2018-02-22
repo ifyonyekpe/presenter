@@ -1,10 +1,10 @@
 export const slide7 = `## Async Await In Depth
 
-#### Awaitables
-  Common Types
+#### Awaitables Types
   - Task
   - Task\\<T\\>
   - Task.Yield
+  - Task.FromResult
   - or you can write your own awaitables
 
   \`\`\` c#
@@ -29,10 +29,7 @@ export const slide7 = `## Async Await In Depth
   \`\`\`
 
 #### Return Types / Values
-  - Async methods can return Task<T>, Task, or void. In almost all cases, you want to return Task<T> or Task, and return void only when you have to.
-  - Task and Task<T> are awaitable while void is not, however Task acts as a void because it does not return a value.
-  - You have to return void when you have async event handlers.
-  - To return a value, the method must be of Task<T> and must return a value of type T.
+  - Async methods can return Task\<T\>, Task, or void.  
 
   \`\`\` c#
   public async Task\<int\> CalculateAnswer()

@@ -1,10 +1,6 @@
 export const slide8 = `## Async Await In Depth
 
 #### Context
-  - when you await a built-in awaitable, then the awaitable will capture the current "context" and later apply it to the remainder of the async method
-  - If \`SynchronizationContext.Current\` is not null, then it’s the current SynchronizationContext (UI or ASP.NET context)
-  - Otherwise its a \`TaskScheduler.Default\` (thread pool context)
-
   \`\`\` c#
   protected async void MyButton_Click(object sender, EventArgs e)
   {
@@ -19,10 +15,6 @@ export const slide8 = `## Async Await In Depth
   \`\`\`
 
 #### Avoiding Context
-  - If you want to tell the awaiter to not capture the current context, you call the **ConfigureAwait** and pass \`false\`
-    - This method is used to suppress the default behavior of marshaling back to the original synchronization context
-  - The important thing to note is that each level of async method calls has it's own context.
-
   \`\`\` c#
   private async Task DownloadFileAsync(string fileName)
   {

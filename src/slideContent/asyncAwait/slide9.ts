@@ -1,8 +1,7 @@
 export const slide9 = `## Async Await In Depth
 
 #### Async Composition
-  - async method also offers the ability to start several operations and await for one (or all) to complete
-
+  
   \`\`\` c#
   public async Task DoOperationsConcurrentlyAsync()
   {
@@ -29,6 +28,4 @@ export const slide9 = `## Async Await In Depth
     return await firstTask;
   }
   \`\`\`
-
-  > **Note**: you can also use these methods along with Task.Run to do simple parallel composition.
 `

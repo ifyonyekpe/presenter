@@ -3,7 +3,8 @@ export const slide1 = `# Async Await in ASP.NET
 * Understand the fundamental concepts surrounding asynchronous programming particularly pertaining to ASP.NET
 * Benefits
 * Async Await In Depth
-* Deadlocks
+* Best Practises
+    - Deadlock Scenerios
 * Conclusion
 * References
 

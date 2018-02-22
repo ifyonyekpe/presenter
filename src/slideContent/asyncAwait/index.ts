@@ -9,6 +9,9 @@ import { slide8 } from './slide8'
 import { slide9 } from './slide9'
 import { slide10 } from './slide10'
 import { slide11 } from './slide11'
+import { slide12 } from './slide12'
+import { slide13 } from './slide13'
+import { slide14 } from './slide14';
 
 export const SlideContents = [
   { text: slide1 },
@@ -22,4 +25,7 @@ export const SlideContents = [
   { text: slide9 },
   { text: slide10 },
   { text: slide11 },
+  { text: slide12 },
+  { text: slide13 },
+  { text: slide14 }
 ]

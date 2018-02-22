@@ -12,7 +12,4 @@ Important Difference
 
 > **Note**: for synchronous request, the \`same thread\` is used for the lifetime of the request; 
       however with asynchronous handlers, in contrast, \`different threads\` may be assigned to the same request
-
-
-> Also, asynchonous code uses much less memory
 `
