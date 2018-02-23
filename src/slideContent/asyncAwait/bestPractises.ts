@@ -58,6 +58,7 @@ export const c = `## Best Practices
 #### Third-party Library
 - important to \`ConfigureAwait(false)\`
 - slight performance increase
+- allow continuation on a different thread
 - default implementation can cause deadlocks
 
 \`\`\` c#
@@ -75,34 +76,34 @@ private async Task<int> DoSomeWorkAsync()
 
 export const d = `## Best Practices
 
-#### Avoid Executing Parallel Loops in the Synchronization Context
-- Execute the loop within a task instance instead
-- Marshal the UI and update back the UI thread only when core computation has completed
+#### Avoid Task.Run or Task.Factory.StartNew
+- You are hindering performance by spawning a new thread
+- Using additional thread adds overhead
+- creates a fake asynchronous method
+- implement asynchronous pattern to get scalability benefits
 
 Bad
 \`\`\` c#
-protected async void MyButton_Click(object sender, EventArgs e)
+public async Task<string> MyTaskAsync(Uri address) 
 {
-  Parallel.For(0, N, i =>
-  {
-      // do work for i
-      DoWork(i);
-  });
+    return await Task.Factory.StaetNew(() =>
+    {
+        using (var client = new WebClient()) 
+        {
+            return client.DownloadString(address);
+        }
+    });
 }
 \`\`\`
----
 
 Good
 \`\`\` c#
-protected async void MyButton_Click(object sender, EventArgs e)
+public async Task<string> MyTaskAsync(Uri address)
 {
-  Task.Factory.StartNew(() =>
-    Parallel.For(0, N, i =>
+    using (var client = new HttpClient())
     {
-        // do work for i
-        DoWork(i);
-    });
-  );
+        return await client.GetStringAsync(address);
+    }
 }
 \`\`\`
 `

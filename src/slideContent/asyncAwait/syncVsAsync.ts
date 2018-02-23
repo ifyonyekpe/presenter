@@ -32,11 +32,4 @@ This time call to the external resource is processed asynchronously
 > **Note**: for synchronous request, the \`same thread\` is used for the lifetime of the request;
       however with asynchronous handlers, in contrast, \`different threads\` may be assigned to the same request
 
-#### Benefits
-* Responsiveness and Scalability
-    > **hide latency** of potentially long-running or blocking operations (e.g. I/O) by starting in the background.
-    So if you have any I/O bound needs (such as requesting from a \`network\` or \`accessing a database\`)
-    >
-* Performance
-    > **reduce execution** time of CPU-bound computations by dividing workload into chunks and executing simultaneously
 `
