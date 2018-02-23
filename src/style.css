@@ -19,7 +19,8 @@ blockquote {
   font-size: 13px;
 }
 
-img[alt='intro'] {
+img[alt='intro'],
+img[alt='Facebook'] {
   width: 300px;
   height: 100px;
 }
