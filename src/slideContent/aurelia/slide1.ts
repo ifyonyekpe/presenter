@@ -15,6 +15,16 @@ export const slide1 = `# Aurelia and Typescript
 * You need a typescript compiler to do the conversion
 * Type safe
 
+***
+> Experience real-time editing with Remarkable!
+
+
+> Blockquotes can also be nested...
+>> ...by using additional greater-than signs right next to each other...
+> > > ...or with spaces between arrows.
+
+[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
+
 Sample basic type declaration:
 
   \`\`\` javascript
