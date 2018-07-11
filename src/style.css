@@ -11,8 +11,9 @@ body {
 }
 
 .content {
-  display: inline-block;
+  width: 60%;
   padding: 0 20px;
+  margin: 0 auto;
 }
 
 blockquote {
@@ -24,9 +25,15 @@ img[alt='Facebook'] {
   width: 300px;
   height: 100px;
 }
-img[alt=ExecutionModel]{
+
+img[alt='farmersIntro'] {
   width: 700px;
-  height: 700px
+  height: 400px;
+}
+
+img[alt='ExecutionModel'] {
+  width: 700px;
+  height: 700px;
 }
 
 pre {

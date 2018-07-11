@@ -1,6 +1,6 @@
 import { inject } from 'aurelia-framework'
 import Remarkable from 'remarkable'
-import { SlideContents } from './slideContent/asyncAwait/index'
+import { SlideContents } from './slideContent/farmers/index'
 import { map, curry } from 'ramda'
 
 @inject(Remarkable)
