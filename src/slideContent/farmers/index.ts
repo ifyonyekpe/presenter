@@ -3,6 +3,7 @@ import { projectOverview } from './projectOverview'
 import { currentSystem } from './currentSystem'
 import { solution } from './solution'
 import { drawbacks } from './drawbacks'
+import { conclusion } from './conclusion'
 
 export const SlideContents = [
   { text: intro },
@@ -10,4 +11,5 @@ export const SlideContents = [
   { text: currentSystem },
   { text: solution },
   { text: drawbacks },
+  { text: conclusion },
 ]
