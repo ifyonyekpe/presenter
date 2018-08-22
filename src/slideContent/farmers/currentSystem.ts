@@ -1,3 +1,3 @@
 export const currentSystem = `# Current System
-* lacks PDF generator
+* lacks the ability to stream a PDF file 
 `

@@ -3,6 +3,6 @@ export const intro = `
 ##
 ##
 ##
-## FARMERS NEW HIRE MODELER PROJECT
+## NEW HIRE MODELER PROJECT
 
 `

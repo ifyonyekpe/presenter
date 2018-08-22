@@ -1,5 +1,5 @@
-export const drawbacks = `# DrawBacks
-* lots of harcoded-values
+export const drawbacks = `# Draw Backs
+* lots of harcoded values
   * attributes
   * event
 * PDF file generator is specific to FARMERS
