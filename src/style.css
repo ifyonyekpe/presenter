@@ -44,3 +44,13 @@ img[alt="ExecutionModel"] {
 pre {
   width: 700px;
 }
+
+p {
+  text-align: center;
+}
+
+ul > li,
+ol > li {
+  font-size: 23px;
+  padding: 10px;
+}

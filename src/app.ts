@@ -1,6 +1,6 @@
 import { inject } from "aurelia-framework";
 import Remarkable from "remarkable";
-import { SlideContents } from "./slideContent/aimPremium/index";
+import { SlideContents } from "./slideContent/ocelot/index";
 import { map, curry } from "ramda";
 
 @inject(Remarkable)
